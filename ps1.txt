@@ -1,0 +1,4 @@
+# greet/test.ps1
+Invoke-WebRequest "http://127.0.0.1:5000/welcome" | Select-Object -ExpandProperty Content | Should Be "welcome"
+Invoke-WebRequest "http://127.0.0.1:5000/welcome/home" | Select-Object -ExpandProperty Content | Should Be "welcome home"
+Invoke-WebRequest "http://127.0.0.1:5000/welcome/back" | Select-Object -ExpandProperty Content | Should Be "welcome back"
